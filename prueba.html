@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Gestión de Calidad PPAP & IATF 16949</title>
+    <link rel="stylesheet" href="PPAPStyle.css"> 
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo SGC PPAP (Similar a Intel)">
+            <h1 style="display: none;">Sistema de Gestión de Calidad PPAP</h1>
+        </div>
+        
+        <nav class="navbar-top">
+            <a href="#politicas">PRODUCTOS</a>
+            <a href="#soporte">ASISTENCIA</a>
+            <a href="#herramientas">SOLUCIONES</a>
+            <a href="elementos.html">PPAP 18 ELEMENTOS</a> 
+            <a href="#powerbi">PANEL DE CONTROL</a> 
+        </nav>
+        
+       
+    </header>
+
+    <section class="carrusel">
+        <h2>Actividades destacadas: IATF & PPAP</h2>
+        <div class="slider-actividades">
+            <div class="slider-track" id="slider-track">
+                <div class="slide"><img src="imagen2.jpeg" alt="Documentación PPAP Nivel 5"><p>Gestión Documental Centralizada</p></div>
+                <div class="slide"><img src="https://placehold.co/800x250/27ae60/ffffff?text=AUDITORIA+INTERNA" alt="Auditoría Interna IATF 16949"><p>Auditoría Interna IATF 16949</p></div>
+                <div class="slide"><img src="https://placehold.co/800x250/e67e22/ffffff?text=PSW+APROBADO" alt="Aprobación de PSW"><p>Ratificación del Proceso (PSW)</p></div>
+                <div class="slide"><img src="https://placehold.co/800x250/9b59b6/ffffff?text=SSO+MFA+IMPLEMENTACION" alt="Flujos de Power Automate"><p>SSO y MFA Implementación</p></div>
+            </div>
+            <button class="btn-left" id="btnLeft">&#8592;</button>
+            <button class="btn-right" id="btnRight">&#8594;</button>
+        </div>
+    </section>
+    
+    <div class="main-container">
+
+        <aside class="sidebar" id="sidebar">
+            <h3 class="sidebar-title">Navegación Rápida</h3>
+            <nav class="sidebar-nav">
+                <a href="#politicas" class="nav-item">✅ IATF 16949: SGC</a>
+                <a href="#herramientas" class="nav-item">🛠️ SSO y Seguridad IT</a>
+                <a href="#documentos" class="nav-item">📑 Proceso PPAP</a>
+                <a href="#sharepoint" class="nav-item">🌐 Estructura SharePoint</a>
+                <a href="#casos" class="nav-item">📂 Power Automate y NC</a>
+                <a href="#powerbi" class="nav-item">📊 Power BI Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            
+            <section id="dashboard" class="seccion-principal">
+                <h2 class="seccion-titulo">Bienvenido al Portal de Calidad y Tecnología</h2>
+                
+                <div class="video-container-rrhh">
+                    <div class="video-card">
+                        <img src="https://placehold.co/300x180/34495e/ffffff?text=SSO+AUTHENTICATION" alt="Single Sign-On" class="video-preview">
+                        <div class="video-overlay">
+                            <span class="play-icon">▶</span>
+                            <p class="video-title-overlay">SSO en el entorno laboral</p>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Single Sign-On (SSO): Qué es y por qué es crítico</h3>
+                        <p>Es un método de autenticación que le permite iniciar sesión una vez, aliviando la carga de recordar múltiples combinaciones de usuario y contraseña, y fortaleciendo la seguridad.</p>
+                        <a href="#herramientas"><button class="btn-primary">Ver Detalles de SSO y MFA</button></a>
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="politicas" class="seccion-principal">
+                <h2 class="seccion-titulo">✅ Sistema de Gestión de Calidad (SGC) IATF 16949</h2>
+                <p>Esta sección se centra en cómo la Intranet soporta el marco de calidad IATF 16949. La digitalización permite centralizar la gestión de requisitos clave, asegurando el cumplimiento y la trazabilidad.</p>
+                
+                <h4>Requisitos Clave Digitalizados</h4>
+                <ul>
+                    <li><strong>Gestión Documental de Calidad:</strong> La Intranet es el repositorio central de toda la documentación (Manual de Calidad, Procedimientos, Instrucciones de Trabajo).</li>
+                    <li><strong>Control de Revisiones:</strong> Aseguramos que solo la versión aprobada y vigente de un documento esté disponible para el personal (Single Source of Truth).</li>
+                    <li><strong>Trazabilidad:</strong> Registro de quién accedió a qué documento y cuándo, esencial para auditorías internas y externas.</li>
+                </ul>
+                <div class="key-point-tech">
+                    <strong>Integración Clave:</strong> La aplicación de **Acceso Condicional (MFA)** en Azure AD proporciona una **Firma Electrónica robusta** a cada aprobación registrada por Power Automate.
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="herramientas" class="seccion-principal">
+                <h2 class="seccion-titulo">🛠️ Single Sign-On (SSO) y Seguridad Reforzada (MFA)</h2>
+                
+                <h3>¿Qué es el SSO?</h3>
+                <p>Es un método de autenticación que ayuda a solucionar el problema de la contraseña, permitiendo iniciar sesión una vez en un servidor de autenticación (como Azure AD), que luego emite certificados que sirven como credenciales verificadas para las aplicaciones participantes.</p>
+                
+                <h4>Protocolos de Autenticación Modernos</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criterio</th>
+                            <th>SAML 2.0</th>
+                            <th>OpenID Connect (OIDC)</th>
+                            <th>Uso en Intranet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Token de Identidad</strong></td>
+                            <td>SAML Assertion (XML)</td>
+                            <td>ID Token (JWT)</td>
+                            <td>**SAML:** Sistemas Legados/ERP. **OIDC:** SharePoint, Teams, Power Apps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MFA Integración</strong></td>
+                            <td>Requiere configuración extra</td>
+                            <td>Nativa con Azure AD</td>
+                            <td>OIDC es preferido para la seguridad moderna y móvil.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Políticas de Acceso Condicional (Azure AD):</strong> Se utilizan para restringir el acceso a documentos críticos (ej. Power Automate para aprobaciones) solo a dispositivos corporativos conformes y **obligando el MFA**.</p>
+            </section>
+
+            <hr>
+
+            <section id="documentos" class="seccion-principal">
+                <h2 class="seccion-titulo">📑 Proceso de Aprobación de Partes de Producción (PPAP)</h2>
+                
+                <h3>Definición del PPAP</h3>
+                <p>El PPAP es un procedimiento empleado en la industria automotriz para **ratificar productos y desarrollo antes de la producción**, asegurando que los proveedores entiendan todos los requisitos de diseño e ingeniería del cliente y que el proceso pueda producir consistentemente el producto.</p>
+                
+                <h4>Eficacia Basada en 3 Pilares</h4>
+                <ol>
+                    <li><strong>Documentación Completa:</strong> Recolección de los 18 elementos requeridos.</li>
+                    <li><strong>Validación Técnica:</strong> Demostración de que el proceso es estable y capaz (estudios estadísticos).</li>
+                    <li><strong>Aprobación del Cliente:</strong> Confirmación formal a través del Part Submission Warrant (PSW).</li>
+                </ol>
+                
+                <div class="key-point-tech">
+                    <strong>Automatización de Aprobaciones:</strong> Power Automate gestiona la secuencia de revisión y aprobación formal. Al completarse, notifica a través de un **Webhook de Teams** a los canales relevantes para asegurar el conocimiento oportuno.
+                    <h4>Ejemplo de Webhook de Teams (JSON)</h4>
+                    <div class="code-block">
+                        <code>
+{
+  "@type": "MessageCard",
+  "title": "**⚠️ PPAP REQUIERE APROBACIÓN URGENTE**",
+  "themeColor": "FF0000",
+  "text": "Se ha generado el PPAP N° @{variables('PPAP_ID')}. Revise el paquete.",
+  "potentialAction": [
+    { "@type": "OpenUri", "name": "Abrir Solicitud de Aprobación", "targets": [{ "os": "default", "uri": "link_a_power_automate" }] }
+  ]
+}
+                        </code>
+                    </div>
+                </div>
+
+                <h4>Pasos Clave para la Ratificación del Proceso</h4>
+                <ul>
+                    <li><strong>1. Decidir Nivel de PPAP:</strong> Lo solicitado por el cliente (Niveles del 1 al 5).</li>
+                    <li><strong>2. Disponer Documentación Clave:</strong> Recopilar DFMEA, PFMEA, Plan de Control, Diagrama de Flujo, registros dimensionales, pruebas de material y desempeño, y el Part Submission Warrant (PSW).</li>
+                    <li><strong>3. Ratificar Proceso:</strong> Realizar estudios estadísticos para demostrar consistencia y capacidad.</li>
+                    <li><strong>4. Entrega y Aprobación del Cliente:</strong> Inspección del paquete PPAP y firma de aceptación.</li>
+                    <li><strong>5. Seguimiento y Mejora Continua:</strong> Actualizar el PPAP ante cualquier cambio de proceso y mantener auditorías internas.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section id="sharepoint" class="seccion-principal">
+                <h2 class="seccion-titulo">🌐 Estructura de SharePoint para Control Documental (IATF §4.4.2)</h2>
+                <p>La correcta arquitectura de SharePoint garantiza el control de versiones, la disponibilidad y el acceso restringido a la documentación sensible.</p>
+
+                <h3>Estructura y Permisos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sitio/Biblioteca</th>
+                            <th>Documentación Almacenada</th>
+                            <th>Control Clave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**SGC Central**</td>
+                            <td>Manual de Calidad, Políticas</td>
+                            <td>**Acceso Lectura:** Todo el staff.</td>
+                        </tr>
+                        <tr>
+                            <td>**Documentación Controlada**</td>
+                            <td>Procedimientos, Instrucciones de Trabajo</td>
+                            <td>**Control de Versiones (Mayor/Menor):** Versión Mayor = Vigente y Aprobada.</td>
+                        </tr>
+                        <tr>
+                            <td>**Carpeta PPAP (Subsito Crítico)**</td>
+                            <td>Paquetes PPAP, Registros de Proveedores</td>
+                            <td>**Permisos Únicos:** Acceso restringido a equipos Calidad/Compras.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="key-point-tech">
+                    <strong>Metadatos Críticos:</strong> Se utilizan columnas (metadatos) como **"N° de Revisión Vigente"** y **"Estado (Vigente, Obsoleto)"** para clasificar y rastrear los documentos, sustituyendo el uso ineficiente de múltiples carpetas.
+                </div>
+            </section>
+            
+            <hr>
+            
+            <section id="casos" class="seccion-principal">
+                <h2 class="seccion-titulo">📂 Automatización de Procesos (Power Automate)</h2>
+                <p>Implementamos flujos de trabajo inteligentes para optimizar procesos críticos de calidad y gestión.</p>
+                
+                <h4>Flujos de Trabajo Específicos</h4>
+                <ul>
+                    <li><strong>Aprobación de Documentos PPAP:</strong> Flujos automáticos que dirigen los documentos clave (FMEA, Plan de Control) a los responsables de área para su firma digital, reduciendo el tiempo de ciclo.</li>
+                    <li><strong>Notificaciones de No Conformidades (NC):</strong> Un formulario en línea para reportar NC que dispara un flujo para iniciar el proceso de Acción Correctiva (8D), asegurando la **trazabilidad** del ciclo de vida de la no conformidad.</li>
+                    <li><strong>Alertas de Calibración:</strong> Recordatorios automatizados al personal de mantenimiento y calidad para la calibración de equipos (Cláusula 7.1.5 de IATF 16949).</li>
+                </ul>
+            </section>
+
+            <hr>
+            
+            <section id="powerbi" class="seccion-principal">
+                <h2 class="seccion-titulo">📊 Power BI Dashboard: Revisión por la Dirección</h2>
+                <p>El Dashboard consolida los datos de SharePoint y Power Automate para presentar métricas de alto nivel a la Dirección, cumpliendo con la revisión de gestión de IATF.</p>
+
+                <h3>Métricas Clave de Calidad (KPIs)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>KPI (Métrica)</th>
+                            <th>Fuente de Datos</th>
+                            <th>Impacto en IATF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**Índice de Documentos Vencidos**</td>
+                            <td>SharePoint: Columna "Fecha de Próxima Revisión"</td>
+                            <td>**CRÍTICO:** Mide el riesgo de documentación obsoleta (Debe ser cero).</td>
+                        </tr>
+                        <tr>
+                            <td>**Tiempo Promedio de Aprobación (TPA)**</td>
+                            <td>Log de Power Automate (Duración del flujo)</td>
+                            <td>**Eficiencia de Procesos:** Mide la agilidad del SGC para publicar documentos.</td>
+                        </tr>
+                        <tr>
+                            <td>**PPAP Pendientes**</td>
+                            <td>Lista de SharePoint: Registros PPAP</td>
+                            <td>**Riesgo de Suministro:** Permite a la Dirección enfocarse en las aprobaciones detenidas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="key-point-tech">
+                    El Dashboard permite el **Drill-through** (navegación a detalle) desde un KPI de alto nivel (ej. Documentos Vencidos) hasta el registro exacto en SharePoint, facilitando las auditorías.
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="seccion-noticias">
+                <h2 class="seccion-titulo">Artículos Destacados (Acceso Rápido)</h2>
+                <div class="grid-tarjetas">
+                    
+                    <div class="tarjeta">
+                        <p class="tarjeta-categoria">Seguridad</p>
+                        <h3>MFA y Protocolos de Acceso Único</h3>
+                        <p>Aprenda sobre MFA y los protocolos SAML 2.0 y OIDC/OAuth 2.0 que aseguran nuestras aplicaciones empresariales.</p>
+                        <a href="#herramientas" class="tarjeta-link">Ver Sección SSO Detallada &rarr;</a>
+                    </div>
+
+                    <div class="tarjeta">
+                        <p class="tarjeta-categoria">Calidad</p>
+                        <h3>Check-List Rápido de Documentación PPAP</h3>
+                        <p>Consulte la lista completa de los 18 elementos requeridos para cualquier sumisión de pieza nueva o modificada.</p>
+                        <a href="elementos.html" class="tarjeta-link">Ver 18 Elementos &rarr;</a>
+                    </div>
+
+                    <div class="tarjeta">
+                        <p class="tarjeta-categoria">Procesos</p>
+                        <h3>Digitalización de las Acciones Correctivas (8D)</h3>
+                        <p>Cómo la Intranet gestiona el ciclo de vida de una No Conformidad desde la detección hasta la causa raíz.</p>
+                        <a href="#casos" class="tarjeta-link">Ver Flujos de NC &rarr;</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="seccion-launchpad">
+                <h2 class="seccion-titulo">Launch Pad (Herramientas Clave)</h2>
+                <div class="grid-launchpad">
+                    <a href="#" class="launchpad-item">
+                        <img src="https://placehold.co/60x60/FFDAB9/ee913b?text=Mail" alt="Email Corporativo">
+                        <span>Email Corporativo</span>
+                    </a>
+                    <a href="#politicas" class="launchpad-item">
+                        <img src="https://placehold.co/60x60/FFDAB9/ee913b?text=SGC" alt="SGC Digital">
+                        <span>SGC Digital (IATF)</span>
+                    </a>
+                    <a href="#casos" class="launchpad-item">
+                        <img src="https://placehold.co/60x60/FFDAB9/ee913b?text=Flow" alt="Power Automate">
+                        <span>Power Automate</span>
+                    </a>
+                    <a href="#documentos" class="launchpad-item">
+                        <img src="https://placehold.co/60x60/FFDAB9/ee913b?text=PPAP" alt="Documentos PPAP">
+                        <span>Documentos PPAP</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Portal Informático y RR.HH. | Powered by IT</p>
+    </footer>
+
+    <script src="PPAPFunc.js"></script>
+</body>
+</html>

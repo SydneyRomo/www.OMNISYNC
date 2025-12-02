@@ -1,0 +1,855 @@
+/* Paleta de Colores Definida */
+:root {
+    --morado-oscuro: #ee913b; /* Naranja/Tostado oscuro */
+    --morado-claro: #9C27B0; /* Morado para acentos y hover */
+    --azul-intenso: #2196F3;
+    --durazno-claro: #FFDAB9; /* Color de fondo o acento suave */
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --fondo-principal: #F5F5F5; /* Gris muy claro para el fondo */
+    --borde-tarjeta: #E0E0E0;
+}
+
+/* Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo-principal);
+    color: #333;
+}/*
+ * PPAPStyle.css
+ * Estilos para la Intranet de Gestión de Calidad (SGC)
+ * Diseño inspirado en la estructura corporativa (look and feel similar a Intel)
+ */
+
+/* --- Variables de Color (Ajusta estos valores en tu entorno) --- */
+:root {
+    /* Colores corporativos oscuros (similar a Intel/Tech) */
+    --morado-oscuro: #000000; 
+    --morado-claro: #0071C5; /* Azul primario de acento */
+    --durazno-claro: #BFE6FF; /* Color de acento para texto */
+    --blanco: #FFFFFF;
+    --gris-claro: #F4F4F9;
+    --accent-color: #0099FF; /* Color de acento para hover/botones */
+    --border-color: #DDDDDD;
+}
+
+/* --- Base General --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gris-claro);
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: var(--morado-claro);
+}
+
+/* -------------------------------------------------------------------------- */
+/* --- 1. Header y Navegación Superior (Estilo Corporativo/Intel) --- */
+/* -------------------------------------------------------------------------- */
+
+.header {
+    /* Fondo oscuro para la barra de navegación superior */
+    background-color: var(--morado-oscuro);
+    color: var(--blanco);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    /* El filtro convierte el placeholder en blanco, como un logo corporativo */
+    width: 80px; 
+    margin-right: 20px;
+    filter: brightness(0) invert(1); 
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--blanco);
+    display: none; /* Oculto para un look más limpio/corporativo */
+}
+
+.navbar-top {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    padding-left: 50px; 
+}
+
+.navbar-top a {
+    /* Estilo minimalista, solo texto */
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-right: 15px;
+    border-radius: 0; 
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.navbar-top a:hover {
+    color: var(--accent-color); /* Cambio a color de acento al pasar el ratón */
+    background-color: transparent;
+}
+
+/* Barra de acciones (Usuario, Búsqueda, Idioma) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--blanco);
+}
+
+.header-actions button {
+    background: none;
+    border: none;
+    color: var(--blanco);
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.header-actions button:hover {
+    color: var(--accent-color);
+}
+
+/* Separador vertical para el idioma/login */
+.header-actions button:last-child {
+    border-left: 1px solid #555;
+    margin-left: 15px;
+}
+
+.menu-toggle {
+    display: none; /* Ocultar en escritorio */
+}
+
+/* -------------------------------------------------------------------------- */
+/* --- 2. Diseño del Layout Principal (Sidebar y Contenido) --- */
+/* -------------------------------------------------------------------------- */
+
+.main-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- Panel Lateral (Sidebar) --- */
+.sidebar {
+    width: 250px;
+    padding: 20px 0;
+    margin-right: 30px;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    color: var(--morado-oscuro);
+    padding: 0 20px 10px;
+    margin-top: 0;
+    border-bottom: 2px solid var(--durazno-claro);
+}
+
+.sidebar-nav a {
+    /* Estilo de navegación vertical solicitado por el usuario */
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-left: 5px solid transparent;
+    transition: background-color 0.3s, border-left-color 0.3s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a:focus {
+    background-color: var(--gris-claro);
+    border-left-color: var(--morado-claro); /* Borde de acento al hacer hover */
+    color: var(--morado-claro);
+}
+
+/* --- Contenido Principal (Content Area) --- */
+.content {
+    flex-grow: 1;
+    min-width: 700px;
+}
+
+.seccion-principal {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.seccion-titulo {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: var(--morado-claro);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 30px 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* --- 3. Elementos de Contenido y Tablas (Estilos Técnicos) --- */
+/* -------------------------------------------------------------------------- */
+
+/* Tablas para Métricas/Protocolos */
+.content table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px; 
+    font-size: 0.9em; 
+}
+.content table th, .content table td { 
+    border: 1px solid var(--border-color); 
+    padding: 10px; 
+    text-align: left; 
+}
+.content table th { 
+    background-color: #e0e6f7; 
+    color: #333; 
+}
+
+/* Bloque de Puntos Clave / Alerta */
+.key-point-tech { 
+    background-color: #fff3cd; 
+    border-left: 5px solid #ffc107; 
+    padding: 15px; 
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+}
+
+/* Bloque de Código JSON/Webhook */
+.code-block { 
+    background-color: #e8e8e8; 
+    padding: 10px; 
+    border-radius: 4px; 
+    overflow-x: auto; 
+    margin-top: 10px; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 0.9em;
+}
+
+/* Botones Primarios */
+.btn-primary {
+    background-color: var(--morado-claro);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- Grid de Tarjetas (Artículos/Launchpad) --- */
+.grid-tarjetas { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+.tarjeta { 
+    border: 1px solid var(--border-color); 
+    padding: 15px; 
+    border-radius: 6px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.tarjeta-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--morado-claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.8em;
+}
+
+/* --- Estilos del Carrusel (Básicos, requieren JS para funcionalidad) --- */
+.carrusel {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-actividades {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; 
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--morado-claro);
+}
+
+.btn-left, .btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 50;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+    display: block;
+    text-decoration: none;
+    color: #555;
+    padding: 12px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background-color: var(--durazno-claro);
+    color: var(--morado-oscuro);
+    font-weight: bold;
+}
+
+/* --- Contenido Principal --- */
+.content {
+    flex-grow: 1;
+    min-width: 600px;
+}
+
+.seccion-titulo {
+    color: var(--azul-intenso);
+    border-bottom: 2px solid var(--azul-intenso);
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+/* --- Estilos para el Recuadro de Video (Como en la Imagen) --- */
+.video-container-rrhh {
+    display: flex;
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.video-card {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.video-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(156, 39, 176, 0.6); /* Morado claro con transparencia */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-icon {
+    font-size: 3em;
+    color: var(--blanco);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 15px 20px;
+    line-height: 0.5;
+}
+
+.video-title-overlay {
+    color: var(--blanco);
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px var(--negro);
+}
+
+.video-info h3 {
+    color: var(--morado-claro);
+    margin-top: 0;
+}
+
+.btn-primary {
+    background-color: var(--azul-intenso);
+    color: var(--blanco);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1565C0;
+}
+
+/* --- Grid de Tarjetas de Noticias --- */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--azul-intenso);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-categoria {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: var(--morado-claro);
+    margin-bottom: 5px;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    color: var(--morado-oscuro);
+}
+
+.tarjeta-link {
+    color: var(--azul-intenso);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* --- Launch Pad (Iconos de Herramientas) --- */
+.seccion-launchpad {
+    margin-bottom: 40px;
+}
+.grid-launchpad {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.launchpad-item {
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    transition: transform 0.2s;
+}
+
+.launchpad-item img {
+    width: 60px;
+    height: 60px;
+    background-color: var(--durazno-claro);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.launchpad-item span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+.launchpad-item:hover {
+    transform: translateY(-5px);
+    color: var(--azul-intenso);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--morado-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+/* --- Estilos del Carrusel Dinámico (Slider) --- */
+.carrusel {
+    margin-bottom: 30px;
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.carrusel h2 {
+    color: var(--morado-oscuro);
+    border-bottom: 2px solid var(--durazno-claro);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.slider-actividades {
+    overflow: hidden; 
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-track {
+    display: flex;
+    /* La duración de la transición debe coincidir con la de JS si la ajustas */
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    width: 400%; /* 4 slides * 100% */
+}
+
+.slide {
+    flex: 0 0 25%; /* Cada slide ocupa el 25% del slider-track */
+    text-align: center;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 250px; /* Altura fija para banners de RRHH/IT */
+    object-fit: cover;
+    display: block;
+}
+
+.slide p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--blanco);
+    padding: 10px 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Botones de control del carrusel */
+.btn-left, .btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(156, 39, 176, 0.8); /* Morado claro semi-transparente */
+    color: var(--blanco);
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 10;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-left:hover, .btn-right:hover {
+    background-color: var(--morado-claro);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.btn-left {
+    left: 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.btn-right {
+    right: 0;
+    border-radius: 6px 0 0 6px;
+}
+
+/* --- Media Queries para Responsividad (Opcional pero Recomendado) --- */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* El sidebar se muestra/oculta con JS */
+        display: none; 
+    }
+    
+    .sidebar.active { /* Clase activa gestionada por JS */
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa */
+    }
+    
+    .navbar-top a {
+        display: none; /* Oculta enlaces superiores para simplificar la barra */
+    }
+
+    .video-container-rrhh {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .video-card {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .grid-launchpad {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+    }
+    
+    /* Carrusel más pequeño en móvil */
+    .slide img {
+        height: 180px; 
+    }
+
+    /* --- ESTILOS ESPECÍFICOS PARA PPAP (Diseño Dinámico) --- */
+
+.ppap-proceso-container {
+    padding: 40px; /* Más padding para que respire */
+    background-color: var(--color-bg-secondary); 
+    border: 2px solid var(--color-bg-tertiary);
+}
+
+.seccion-subtitulo {
+    font-size: 1.1rem;
+    color: var(--color-text-dim);
+    margin-bottom: 30px;
+    font-family: var(--font-mono);
+}
+
+/* --- GRID DE ETAPAS PPAP (4 COLUMNAS) --- */
+.ppap-etapas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.ppap-card {
+    background-color: var(--color-bg-tertiary); /* Color de tarjeta oscuro */
+    padding: 25px;
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid transparent; /* Para el color de etapa */
+}
+
+.ppap-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 188, 212, 0.3); /* Sombra de acento */
+}
+
+.ppap-card h3 {
+    font-family: var(--font-header);
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.ppap-card p {
+    color: var(--color-text-dim);
+    font-size: 0.95rem;
+    min-height: 50px; /* Asegura altura consistente */
+}
+
+.icon-large {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Colores de Acento por Etapa */
+.etapa-1 { border-top-color: #f39c12; } /* Amarillo/Naranja */
+.etapa-1 .icon-large { color: #f39c12; }
+
+.etapa-2 { border-top-color: #e74c3c; } /* Rojo/Producción */
+.etapa-2 .icon-large { color: #e74c3c; }
+
+.etapa-3 { border-top-color: #3498db; } /* Azul/Presentación */
+.etapa-3 .icon-large { color: #3498db; }
+
+.etapa-4 { border-top-color: #2ecc71; } /* Verde/Aprobación */
+.etapa-4 .icon-large { color: #2ecc71; }
+
+
+/* --- BOTÓN DE DETALLE DE TARJETA --- */
+.btn-ppap-detalle {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--color-accent-blue);
+    color: var(--color-accent-blue);
+    padding: 8px 15px;
+    border-radius: var(--border-radius-sm);
+    margin-top: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-ppap-detalle:hover {
+    background-color: var(--color-accent-blue);
+    color: var(--color-white);
+    box-shadow: 0 0 15px var(--color-accent-blue);
+}
+
+
+/* --- RECURSOS RÁPIDOS (Bloque Inferior) --- */
+.ppap-recursos-rapidos {
+    background-color: var(--color-bg-tertiary);
+    padding: 20px 30px;
+    border-radius: var(--border-radius-main);
+    border: 1px dashed var(--color-accent-blue);
+    box-shadow: var(--shadow-light);
+}
+
+.recursos-titulo {
+    font-family: var(--font-header);
+    color: var(--color-accent-orange);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.recursos-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.link-rapido {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-light);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-mono);
+    border: 1px solid var(--color-bg-tertiary);
+    transition: all 0.3s ease;
+}
+
+.link-rapido i {
+    margin-right: 8px;
+    color: var(--color-accent-orange);
+    font-size: 1.1rem;
+}
+
+.link-rapido:hover {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-accent-orange);
+    border-color: var(--color-accent-orange);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive (Ajuste para móviles) --- */
+@media (max-width: 768px) {
+    .ppap-etapas-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    .ppap-recursos-rapidos {
+        padding: 20px;
+    }
+    .recursos-links {
+        flex-direction: column;
+    }
+}
+}
